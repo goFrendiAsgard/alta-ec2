@@ -22,8 +22,16 @@ mkdir -p app
 ```
 
 # Build and run the program
+
 ```bash
 ./connect-to-ec2.sh
 cd ~/app
 ./build-and-run.sh
 ```
+
+# Deploy in EC2 using github workflow
+
+- Pull this repository from EC2
+- Remove existing docker container if exist
+- Docker build
+- Docker run/start

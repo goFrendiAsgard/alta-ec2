@@ -9,6 +9,9 @@ import (
 
 func main() {
 	port := os.Getenv("HTTP_PORT")
+	if port == "" {
+		port = ":80"
+	}
 	e := echo.New()
 	e.GET("/", hello)
 	e.GET("/:name", helloName)
