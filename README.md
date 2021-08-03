@@ -31,6 +31,14 @@ cd ~/app
 
 # Deploy in EC2 using github workflow
 
+```bash
+./connect-to-ec2.sh
+sudo apt-get docker.io
+# make docker accessible by every user (don't do this actually)
+sudo chmod 777 /var/run/docker.sock
+# ctrl+c to return to local machine
+```
+
 - Pull this repository from EC2
 - Remove existing docker container if exist
 - Docker build
